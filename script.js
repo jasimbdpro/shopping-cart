@@ -5,6 +5,7 @@ incrementItem1.addEventListener('click', function () {
     let quantityOfItem1 = stringToNum('quantityOfItem1');
     let quantity1Increased = quantityOfItem1 + 1;
     document.getElementById('quantityOfItem1').innerText = quantity1Increased;
+
     let priceOfItem1 = stringToNum('priceOfItem1')
     let price1Increased = priceOfItem1 + 1219;
     document.getElementById('priceOfItem1').innerText = price1Increased;
@@ -14,11 +15,13 @@ incrementItem1.addEventListener('click', function () {
 let decrementItem1 = document.getElementById('decrementItem1')
 decrementItem1.addEventListener('click', function () {
     let quantityOfItem1 = stringToNum('quantityOfItem1');
-    let quantity1Increased = quantityOfItem1 - 1;
-    document.getElementById('quantityOfItem1').innerText = quantity1Increased;
-    let priceOfItem1 = stringToNum('priceOfItem1')
-    let price1Increased = priceOfItem1 - 1219;
-    document.getElementById('priceOfItem1').innerText = price1Increased;
+    if (document.getElementById('quantityOfItem1').innerText > 0) {
+        let quantity1Increased = quantityOfItem1 - 1;
+        document.getElementById('quantityOfItem1').innerText = quantity1Increased;
+        let priceOfItem1 = stringToNum('priceOfItem1')
+        let price1Increased = priceOfItem1 - 1219;
+        document.getElementById('priceOfItem1').innerText = price1Increased;
+    }
 })
 // Click handler to second + button
 
@@ -36,12 +39,18 @@ incrementItem2.addEventListener('click', function () {
 let decrementItem2 = document.getElementById('decrementItem2')
 decrementItem2.addEventListener('click', function () {
     let quantityOfItem2 = stringToNum('quantityOfItem2');
-    let quantity1Increased = quantityOfItem2 - 1;
-    document.getElementById('quantityOfItem2').innerText = quantity1Increased;
-    let priceOfItem2 = stringToNum('priceOfItem2')
-    let price1Increased = priceOfItem2 - 59;
-    document.getElementById('priceOfItem2').innerText = price1Increased;
+
+    if (document.getElementById('quantityOfItem2').innerText > 0) {
+        let quantity1Increased = quantityOfItem2 - 1;
+        document.getElementById('quantityOfItem2').innerText = quantity1Increased;
+        let priceOfItem2 = stringToNum('priceOfItem2')
+        let price2Increased = priceOfItem2 - 59;
+        document.getElementById('priceOfItem2').innerText = price2Increased;
+    }
 })
+
+const subTotal = price1Increased + price2Increased;
+document.getElementById('subtotal').innerText = subTotal;
 
 
 
