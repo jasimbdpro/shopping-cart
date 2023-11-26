@@ -9,6 +9,7 @@ incrementItem1.addEventListener('click', function () {
     let priceOfItem1 = stringToNum('priceOfItem1')
     let price1Increased = priceOfItem1 + 1219;
     document.getElementById('priceOfItem1').innerText = price1Increased;
+
 })
 // Click handler to first - button
 
@@ -19,8 +20,9 @@ decrementItem1.addEventListener('click', function () {
         let quantity1Increased = quantityOfItem1 - 1;
         document.getElementById('quantityOfItem1').innerText = quantity1Increased;
         let priceOfItem1 = stringToNum('priceOfItem1')
-        let price1Increased = priceOfItem1 - 1219;
-        document.getElementById('priceOfItem1').innerText = price1Increased;
+        let price11Increased = priceOfItem1 - 1219;
+        document.getElementById('priceOfItem1').innerText = price11Increased;
+        updateSubtotal();
     }
 })
 // Click handler to second + button
@@ -31,8 +33,9 @@ incrementItem2.addEventListener('click', function () {
     let quantity1Increased = quantityOfItem2 + 1;
     document.getElementById('quantityOfItem2').innerText = quantity1Increased;
     let priceOfItem2 = stringToNum('priceOfItem2')
-    let price1Increased = priceOfItem2 + 59;
-    document.getElementById('priceOfItem2').innerText = price1Increased;
+    let price2Increased = priceOfItem2 + 59;
+    document.getElementById('priceOfItem2').innerText = price2Increased;
+
 })
 // Click handler to second - button
 
@@ -44,13 +47,29 @@ decrementItem2.addEventListener('click', function () {
         let quantity1Increased = quantityOfItem2 - 1;
         document.getElementById('quantityOfItem2').innerText = quantity1Increased;
         let priceOfItem2 = stringToNum('priceOfItem2')
-        let price2Increased = priceOfItem2 - 59;
-        document.getElementById('priceOfItem2').innerText = price2Increased;
+        let price21Increased = priceOfItem2 - 59;
+        document.getElementById('priceOfItem2').innerText = price21Increased;
+        updateSubtotal();
     }
 })
 
-const subTotal = price1Increased + price2Increased;
-document.getElementById('subtotal').innerText = subTotal;
+
+function updateSubtotal() {
+    let newPriceItem1 = stringToNum('priceOfItem1')
+    let newPriceItem2 = stringToNum('priceOfItem2')
+    let subTotal = document.getElementById('subtotal')
+    let newsubTotal = newPriceItem1 + newPriceItem2;
+    subTotal.innerText = newsubTotal;
+    let tax = document.getElementById('tax')
+    let taxAmount = newsubTotal * 5 / 100;
+    tax.innerText = taxAmount
+    let total = document.getElementById('total')
+    total.innerText = newsubTotal + taxAmount;
+
+}
+
+
+
 
 
 
