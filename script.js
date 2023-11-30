@@ -6,6 +6,8 @@ let quantityOfItem1Num = parseFloat(quantityOfItem1.innerText);
 let quantityOfItem2Num = parseFloat(quantityOfItem2.innerText);
 let priceOfItem1Num = parseFloat(priceOfItem1.innerText)
 let priceOfItem2Num = parseFloat(priceOfItem2.innerText)
+let subtotal = document.getElementById('subtotal')
+let subtotalNum = parseFloat(subtotal)
 
 
 //Increment change
@@ -14,6 +16,7 @@ incrementItem1.addEventListener('click', function () {
     quantityOfItem1.innerText = quantityOfItem1Num;
     let priceOfItem1NumChange = priceOfItem1Num * quantityOfItem1Num
     priceOfItem1.innerText = priceOfItem1NumChange;
+    subtotal.innerText = priceOfItem1NumChange
 })
 
 //Decrement change
@@ -24,6 +27,7 @@ decrementItem1.addEventListener('click', function () {
 
         let priceOfItem1NumChange = priceOfItem1Num * quantityOfItem1Num
         priceOfItem1.innerText = priceOfItem1NumChange;
+        subtotal.innerText = priceOfItem1NumChange
     }
 })
 
@@ -37,6 +41,7 @@ incrementItem2.addEventListener('click', function () {
     console.log(quantityOfItem2Num)
     let priceOfItem2NumChange = priceOfItem2Num * quantityOfItem2Num
     priceOfItem2.innerText = priceOfItem2NumChange;
+    subtotal.innerText = priceOfItem2NumChange
 
 })
 
@@ -48,6 +53,8 @@ decrementItem2.addEventListener('click', function () {
 
         let priceOfItem2NumChange = priceOfItem2Num * quantityOfItem2Num
         priceOfItem2.innerText = priceOfItem2NumChange;
+        subtotal.innerText = priceOfItem2NumChange
+
     }
 })
 quantityOfItem2.addEventListener('input', function () {
