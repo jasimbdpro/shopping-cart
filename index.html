@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
    <title>Shopping Cart</title>
@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
    <link rel="stylesheet" href="bootstrap.min.css">
-   <link href="css/all.css" rel="stylesheet" />
+   <link href="css/all.css" rel="stylesheet">
    <link href="style.css" rel="stylesheet">
 </head>
 
@@ -17,7 +17,7 @@
       <div class="container" id="shoppingcart">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto" id="itemswrapper">
-               <div class="cart-item" id="item1">
+               <div class="cart-item" id="phone">
                   <div class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
@@ -26,19 +26,19 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="decrementItem1" class="btn btn-default item-increment"><i
+                           <button id="phone-decrease" class="btn btn-default item-increment"><i
                                  class="fas fa-minus"></i></button>
-                           <p id="quantityOfItem1" class="form-control text-center">1</p>
-                           <button id="incrementItem1" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <input id="phone-count" class="form-control text-center" value="1" disabled>
+                           <button id="phone-increase" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <!-- price of first item -->
-                        <h5>$<span id="priceOfItem1">1219</span></h5>
-                        <img id="removeItem1" src="images/remove.png" alt="" class="remove-item">
+                        <h5>$<span id="phone-price">1219</span></h5>
+                        <img id="removeiPhone11" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
 
-               <div class="cart-item" id="item2">
+               <div class="cart-item" id="case">
                   <div class="row">
                      <div class="col-md-7 center-item mx-auto">
                         <img src="images/product-2.png" alt="">
@@ -46,13 +46,13 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="decrementItem2" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <p id="quantityOfItem2" class="form-control text-center">1</p>
-                           <button id="incrementItem2" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="case-decrease" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="case-count" class="form-control text-center" value="1" disabled>
+                           <button id="case-increase" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$<span id="priceOfItem2">59</span></h5>
-                        <img id="removeItem2" src="images/remove.png" alt="" class="remove-item">
+                        <h5 id="case-total">$59</h5>
+                        <img id="removeiPhoneCase" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
@@ -78,36 +78,6 @@
                </div>
             </div>
          </div>
-      </div>
-   </section>
-
-   <section id="deliverydetails" class="d-none">
-      <div class="container mt-5">
-         <div class="bg-light p-5">
-            <h2>Fill Delivery Details</h2>
-            <form id="deliveryDetailsForm">
-               <div class="form-group">
-                  <label for="formGroupExampleInput">Name</label>
-                  <input type="text" class="form-control" id="customerName" placeholder="Enter your Fullname">
-               </div>
-               <div class="form-group">
-                  <label for="formGroupExampleInput2">Email</label>
-                  <input type="text" class="form-control" id="customerEmail" placeholder="Enter Your Email Address">
-               </div>
-               <div class="form-group">
-                  <label for="formGroupExampleInput2">Phone Number</label>
-                  <input type="text" class="form-control" id="customerPhone" placeholder="Enter your Phone Number">
-               </div>
-               <div class="form-group">
-                  <label for="formGroupExampleInput2">Present Address</label>
-                  <input type="text" class="form-control" id="customerAddress" placeholder="Enter your Present Address">
-               </div>
-               <div class="form-group">
-                  <button type="submit" class="btn btn-success">Submit And Confirm</button>
-               </div>
-            </form>
-         </div>
-
       </div>
    </section>
 
@@ -140,13 +110,13 @@
                         </thead>
                         <tbody>
 
-                           <tr id="invoice-item1">
+                           <tr id="invoice-iPhone11">
                               <td>iPhone 11 128GB Black</td>
                               <td class="text-center">$ <span id="invoice-item-price1">1219</span></td>
                               <td class="text-center" id="invoice-item-quantity1">1</td>
                               <td class="text-right">$<span id="invoice-item-total1">1219</span></td>
                            </tr>
-                           <tr id="invoice-item2">
+                           <tr id="invoice-iPhoneCase">
                               <td>iPhone 11 Silicone Case - Black</td>
                               <td class="text-center">$ <span id="invoice-item-price2">59</span></td>
                               <td class="text-center" id="invoice-item-quantity2">1</td>
@@ -180,7 +150,9 @@
       </div>
    </section>
 
-   <script src="script.js"></script>
+   <script>
+
+   </script>
 </body>
 
 </html>
