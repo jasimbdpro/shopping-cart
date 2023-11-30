@@ -1,13 +1,5 @@
-// Some function declaration to make workflow easier 
-function stringtoNumber(id) {
-    let number = parseFloat(document.getElementById(id).innerText);
-    return number;
-}
-function getId(id) {
-    let element = document.getElementById(id);
-    return element;
-}
 
-// Start main code 
-
-
+let quatityOfItem1 = document.getElementById('quantityOfItem1');
+let incrementItem1 = document.getElementById('incrementItem1');
+let decrementItem1 = document.getElementById('decrementItem1');
+let priceOfItem1 = document.getElementById('priceOfItem1');
